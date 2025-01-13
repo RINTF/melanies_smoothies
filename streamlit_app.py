@@ -14,7 +14,7 @@ st.write(
 )
 
 # session = get_active_session()
-cnx = st.connect("streamlit")
+cnx = st.connect("snowflake")
 session = cnx.session()
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
